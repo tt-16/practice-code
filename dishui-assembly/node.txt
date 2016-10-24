@@ -73,7 +73,7 @@
 
 寄存器32位     主要用途        														 编号     	存储数据范围
 EAX							累加器																			0					0 - 0xFFFFFFFF																		
-ECX							技术																				1					0 - 0xFFFFFFFF							
+ECX							基地																				1					0 - 0xFFFFFFFF							
 EDX							I/O指针																			2					0 - 0xFFFFFFFF																					
 EBX							DS段的数据指针															3					0 - 0xFFFFFFFF									
 ESP							堆栈指针																		4					0 - 0xFFFFFFFF												
@@ -117,8 +117,28 @@ mov r32,imm32
 
 内存操作
 mov eax, dword ptr ds:[0x0012ff24]	
-内存寻址的五种方式：																																															
-																									
+
+
+内存寻址的五种方式：	
+
+
+寻址公式一：[立即数]
+	
+	读取内存的数
+	mov eax,dword ptr ds:[0x13ffc4]
+	mov eax,dword ptr ds:[0x13ffc8]
+	向内存中写入数据
+	mov dword ptr ds:[0x13ffc4],eax
+	mov dword ptr ds:[0x13ffc8],eax		
+	获取内存编号
+	LEA BAX,DWORD PTR DS:[0X13FFC4]
+	LEA BAX,DWORD PTR DS:[ESP+8]
+															
+寻址公式一：[]																																														
+寻址公式一：[]																																														
+寻址公式一：[]																																														
+寻址公式一：[]																																														
+寻址公式一：[]																																														
 																																																						mov r/m8,r8																				
 																																																																										
 																																																																										

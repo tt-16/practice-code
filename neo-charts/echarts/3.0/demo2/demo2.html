@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts 3.0 本地JSON文件加</title>
+    <!-- 引入 echarts.js  echarts.min.js -->
+    
+</head>
+<body style="width:100%; height:100%">
+	
+		<script type="text/javascript" src="data.json" ></script>
+    <script type="text/javascript" src="echarts.js"></script>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: auto;height:236px;"></div>
+    <script type="text/javascript">
+    	// 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+       
+        //图表显示提示信息
+				myChart.showLoading({
+					text: "图表数据正在努力加载..."
+				});
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+            	text : "风速频率直方图",
+                subtext: "频率 / 风速"								
+            },
+            tooltip: {
+            		trigger: 'axis'
+            },
+            legend: {},
+            toolbox: {
+							show: true,
+							feature: {
+									mark: false
+							}
+						},
+						calculable: true,
+            xAxis: {
+                data: data.categories
+            },
+            yAxis: {},
+            series: [{
+                name: "风速频率直方图",
+                type: 'bar',
+                data: data.values
+            }]
+        };
+				// 使用刚指定的配置项和数据显示图表。
+     		myChart.setOption(option);
+				myChart.hideLoading();
+       
+       /*
+       // 异步加载数据
+			 $.get('data.json').done(function (data) {
+			     // 填入数据
+			     myChart.setOption({
+			        xAxis: {
+			            data: data.categories
+			        },
+			        series: [{
+			            // 根据名字对应到相应的系列
+			            name: '销量',
+			            data: data.data
+			        }]
+			  });
+			    
+       });
+       */
+ 
+    </script>
+    
+    
+
+</body>
+</html>

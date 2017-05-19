@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<graph caption="风速频率直方图" xAxisName="风速" yAxisName="频率" showNames="1" showValues="0" decimalPrecision="3" formatNumberScale="0" alternateHGridAlpha="5" divLineAlpha="20">
+    <set name="0" value="0.000" color="D60606" />
+    <set name="1" value="0.005" color="D60606" />
+    <set name="2" value="0.026" color="D60606" />
+    <set name="3" value="0.052" color="D60606" />
+    <set name="4" value="0.083" color="D60606" />
+    <set name="5" value="0.099" color="D60606" />
+    <set name="6" value="0.116" color="D60606" />
+    <set name="7" value="0.116" color="D60606" />
+    <set name="8" value="0.107" color="D60606" />
+    <set name="9" value="0.090" color="D60606" />
+    <set name="10" value="0.080" color="D60606" />
+    <set name="11" value="0.067" color="D60606" />
+    <set name="12" value="0.054" color="D60606" />
+    <set name="13" value="0.034" color="D60606" />
+    <set name="14" value="0.027" color="D60606" />
+    <set name="15" value="0.017" color="D60606" />
+    <set name="16" value="0.011" color="D60606" />
+    <set name="17" value="0.007" color="D60606" />
+    <set name="18" value="0.005" color="D60606" />
+    <set name="19" value="0.002" color="D60606" />
+    <set name="20" value="0.002" color="D60606" />
+    <set name="21" value="0.002" color="D60606" />
+    <set name="22" value="0.000" color="D60606" />
+    <set name="23" value="0.000" color="D60606" />
+    <set name="24" value="0.000" color="D60606" />
+    <set name="25" value="0.000" color="D60606" />
+</graph>

@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<graph caption="风功率曲线图" xAxisName="风速" yAxisName="功率（kw）" showNames="1" showValues="0" decimalPrecision="1" formatNumberScale="0" alternateHGridAlpha="5" divLineAlpha="20">
+    <set name="0" value="0" color="D60606" />
+    <set name="1" value="0" color="D60606" />
+    <set name="2" value="0" color="D60606" />
+    <set name="3" value="0" color="D60606" />
+    <set name="4" value="189" color="D60606" />
+    <set name="5" value="427" color="D60606" />
+    <set name="6" value="773" color="D60606" />
+    <set name="7" value="1255" color="D60606" />
+    <set name="8" value="1890" color="D60606" />
+    <set name="9" value="2701" color="D60606" />
+    <set name="10" value="3496" color="D60606" />
+    <set name="11" value="3893" color="D60606" />
+    <set name="12" value="3989" color="D60606" />
+    <set name="13" value="3999" color="D60606" />
+    <set name="14" value="4000" color="D60606" />
+    <set name="15" value="4000" color="D60606" />
+    <set name="16" value="4000" color="D60606" />
+    <set name="17" value="4000" color="D60606" />
+    <set name="18" value="4000" color="D60606" />
+    <set name="19" value="4000" color="D60606" />
+    <set name="20" value="4000" color="D60606" />
+    <set name="21" value="4000" color="D60606" />
+    <set name="22" value="4000" color="D60606" />
+    <set name="23" value="4000" color="D60606" />
+    <set name="24" value="4000" color="D60606" />
+    <set name="25" value="4000" color="D60606" />
+</graph>

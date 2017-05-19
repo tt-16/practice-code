@@ -12,15 +12,15 @@ for %%m in (*) do (
     if not "%%m"=="%~nx0" (
     	if not "%%~xm" == "bat" (
     		set sstr=%%~nm
-    		set sstr=!sstr:~0,4!
+    		set sstr=!sstr:~0,10!
         rem echo #Test: !all! !sstr! %%~xm
         
-        if "!sstr!"=="2014" (
+        if "!sstr!"=="2016-05-04" (
         	set /a num+=1
         	set str=%%m
-        	set str=!str:~4!
-        	rem echo "2016!str! %%~xm"
-        	ren "%%m" "2016!str!"
+        	set str=!str:~10!
+        	rem echo "2016-07-05!str! %%~xm"
+        	ren "%%m" "2016-07-05!str!"
         ) 
     	)
     )

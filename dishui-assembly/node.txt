@@ -197,8 +197,93 @@ mov eax, dword ptr ds:[0x0012ff24]
 	
 	获取内存编号
 	LEA EAX,DWORD PTR DS:[EAX+ECX*4+4]																																											
+																					
+																						
+																						
+																						
 																																													
-																																																						mov r/m8,r8																				
+	PUSH指令
+		1. PUSH R32
+		2. PUSH R16
+		3. PUSH M16
+		4. PUSH M32
+		5. PUSH imm8/imm16/imm32
+		
+	POP指令				
+		1. pop r32
+		2. pop r16
+		3. pop m16
+		4. pop m32				
+		
+			
+	PUSHAD指令  保护现场 把八个寄存器的值入栈
+	
+	POPAD指令		恢复现场
+	
+	
+	
+	
+	
+	
+	
+	
+	EFLAGS寄存器
+	
+	31          22  21  20  19  18  17  16  15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
+	|						 |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+																					0								OF  DF  IF  TF  SF  ZF   0  AF   0  PF   1  CF
+
+	[OF]溢出标志			- 11
+	[DF]方向标志
+	[IF]终端标志
+	[TF]单步标志
+	[SF]符号标志			- 7
+	[ZF]零标志				- 6
+	[AF]辅助进位标志	- 4
+	[PF]奇偶标志			- 2 
+	[CF]进位标志      - 0
+
+
+	1.进位标志CF (Carry Flag): 如果运算结果的最高位产生了一个进位或者借位，那么其值为1，否则为零。
+		MOV AL, 0xEF
+		ADD AL, 2
+		
+		MOV AL,0xFE
+		ADD AL,2
+		
+	2.奇偶标志PF (Parity Flag): 奇偶标志PF用于反映运算结果中“1”的个数的奇偶性。
+		如果“1”的个数为偶数，则PF的值为1，否则其值为0.
+		MOV AL,3
+		ADD AL,3
+		ADD AL,2
+		
+	3.辅助进位标志AF (Auxiliary Carry Flag): 在发生下列情况时，辅助进位标志AF的值被置1，否则其值为0；
+		(1) 在字操作时，发生低字节向高字节进位或者借位时；
+		(2) 在字节操作时，发生低4位向高4位进位或借位时。
+		MOV EAX, 0x55EEFFFF     MOV AX,5EFF      MOV AL,4E
+		ADD	EAX,2								ADD AX,2				 ADD AL,2
+		
+	4.零标志ZF(Zero Flag): 零标志ZF用来反映运算结果是否为0。
+		如果运算结果为0，则其值为1，否则其值为0，在判断运算结果是否为0时，可使用此标志位。
+		XOR EAX,EAX
+		MOV EAX,2
+		SUB EAX,2
+
+
+
+---------------
+	PE
+	下断点
+	win32 API+
+	函数调用
+	熟悉堆栈-画堆栈图
+	Call JCC 标志寄存器
+	
+	ADC/SBB/XCHG
+	MOVS指令
+	STOS指令
+	REP指令
+	---------------																												
 																																																																										
 																																																																										
 																																																																										

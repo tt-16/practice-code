@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<style type="text/css">  
+			body{ margin:1px; height:100%; float:center; background-color:#D4D0C8; canvasbgColor:#D4D0C8}  
+			html{ height:100% }  
+			#titleDiv{ width:100%; background-color:#8BBA00; border:1px; solid;}
+			#chartdiv1{ width:100%; height:100%; float:center; _margin-right:0px; background-color:#D4D0C8; border:0px; }   
+		</style>  
+		<script language="JavaScript" src="FusionCharts/FusionCharts.js"></script>
+	</head>
+	<body >
+		
+		<div id="chartdiv1">
+			<script type="text/javascript">
+				var myChart1 = new FusionCharts("FusionCharts/Line.swf", "myChartId1", "100%", "100%"); 
+				myChart1.setDataURL("PowerData.xml"); 
+				myChart1.render("chartdiv1");	
+			</script>
+		</div>
+	</body>
+</html>
